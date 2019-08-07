@@ -80,7 +80,6 @@ def resolve_dll_path(dll_name, search_paths):
             # This most likely means the user has a PATH entry that no longer exists
             # so we probably don't care about this folder and can go onto the next 
             # folder in search_paths.
-            #print(str(err))
             continue
 
         if dll_name.lower() in list(map(lambda x: x.lower(), files)):
@@ -88,7 +87,7 @@ def resolve_dll_path(dll_name, search_paths):
 
 
 if __name__=='__main__':
-    myarg = os.path.normpath("C:\\dev\\blitzdg\\bin\\Release\\pyblitzdg.pyd")
+    myarg = sys.argv[1]
     base_path = os.path.dirname(myarg)
     base_lib = os.path.basename(myarg)
     
@@ -136,10 +135,6 @@ if __name__=='__main__':
             continue
         print("patching symbols in file: ", lib)
 
-        #returned_val = 0
-        #if not re.search("pyblitzdg\.pyd", lib):
-        #    returned_val = subprocess.call("C:\\mingw64\\bin\\strip.exe " + lib, shell=False)
-        #print("strip returned: " + str(returned_val))
         buf = None
         with open(lib, "rb") as f:
             buf = f.read()
