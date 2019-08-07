@@ -1,3 +1,8 @@
+'''
+Copyright (C) 2019  Derek Steinmoeller (@dsteinmo).
+See LICENSE file at project root for more details.
+'''
+
 import pefile
 import os, sys
 import shutil
