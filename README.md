@@ -4,8 +4,8 @@ An `auditwheel`-like tool for Windows binary extension modules. A work-in-progre
 
 ## Usage
 
-Install dependencies by running `install-deps.bat`.
-
+* First, install probewheel dependencies by running `install-deps.bat`.
+* Then:
 ```
 python probewheel.py <path\to\binary-module.pyd>
 ```
