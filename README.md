@@ -26,8 +26,8 @@ python probewheel.py <path\to\binary-module.pyd>
 
 ## Authors
 
-auditwheel - Derek Steinmoeller (dsteinmo)
-machomachomangler - Nathaniel J. Smith (njsmith)
+* probewheel - Derek Steinmoeller (dsteinmo)
+* machomachomangler - Nathaniel J. Smith (njsmith)
 
 # License
 
