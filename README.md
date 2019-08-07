@@ -1,6 +1,6 @@
 # Probewheel
 
-An `auditwheel`-like tool for Windows binary extension modules. A work-in-progress.
+An `auditwheel`-like tool for Windows binary extension modules. A work-in-progress. It currently does not re-bundle wheel files, but handles the collection and renaming/relinking of shared libraries.
 
 ## Usage
 
@@ -9,6 +9,10 @@ An `auditwheel`-like tool for Windows binary extension modules. A work-in-progre
 ```
 python probewheel.py <path\to\binary-module.pyd>
 ```
+
+## Output
+
+This *should* create a folder called \_libs in the above path that will contain the pyd re-linked to a set of DLLs renamed to include a 7-digit SHA. If everything went well, you should be able to `import` your module after adding it to your `PYTHONPATH` environment variable.
 
 ## Caveats
 
