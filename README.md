@@ -2,6 +2,14 @@
 
 An `auditwheel`-like tool for Windows binary extension modules. A work-in-progress.
 
+## Usage
+
+Install dependencies by running `install-deps.bat`.
+
+```
+python probewheel.py <path\to\binary-module.pyd>
+```
+
 ## Contents
 
 * machomachomangler (for mangling PE binaries). Pulled in from https://github.com/njsmith/machomachomangler
